@@ -8,11 +8,11 @@
 		
 			<label>
 				Email:
-			<input type = "text" name = "email" />
+			<input type = "text" name = "email" required = "required" />
 			</label><br />
 			<label>
 				Senha:
-			<input type = "password" name = "senha" />
+			<input type = "password" name = "senha" required = "required" />
 			</label><br />
 			<label>
 			<input type = "submit" value = "Logar!" />

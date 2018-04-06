@@ -14,6 +14,14 @@
 		}
 		
 		$xml = simplexml_load_file($arquivo);
+		
+		foreach($xml->cliente as $cliente){
+			
+			if(str_replace(" ","",$cliente->email)==str_replace(" ","",$_POST["email"])){
+				die('Email já cadastrado! <a href = "cadastro.php">Cadastrar Novamente</a>');
+			}
+		}
+		
 		$nova_posicao = sizeof($xml->cliente);
 		
 		$xml->cliente[$nova_posicao]->nome = $_POST["nome"];
