@@ -1,5 +1,8 @@
-<html>
-	<body>
+<?php
+	include("cabecalho.php");
+?>
+		
+		<div id = "form">
 		<h2>Cadastre um novo cliente</h2>
 		<form action = "registra_cadastro.php" method = "post">
 			<label>
@@ -20,6 +23,8 @@
 			</label><br />
 			<input type = "submit" value = "Cadastrar">
 		</form>
-		<p><a href = "index.php">Voltar para o Login!</a></p>
+		<p>Voltar para o<a id = "a" href = "index.php"> Login!</a></p>
 	</body>
-</html>
+<?php
+	include("rodape.php");
+?>

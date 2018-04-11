@@ -3,7 +3,7 @@
 	
 	if(!isset($_SESSION["login"])){
 ?>
-
+		<div id = "form">
 		<form action = "autenticacao.php" method = "post" >
 		
 			<label>
@@ -17,7 +17,7 @@
 			<label>
 			<input type = "submit" value = "Logar!" />
 			</label><br />
-			<p>Não possui conta? <a href = "cadastro.php">Cadastre-se</a></p>
+			<p>Não possui conta? <a id = "a" href = "cadastro.php">Cadastre-se</a></p>
 		
 		</form>
 
@@ -26,4 +26,5 @@
 		header("location: mostra_cliente.php");
 	}
 
+	include("rodape.php");
 ?>

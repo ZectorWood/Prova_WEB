@@ -1,0 +1,51 @@
+body{
+	text-align: center;
+	font-family: Britannic Bold;
+	font-size: 20px;
+}
+#sair{
+	display: block;
+	text-align: right; 
+}
+#sair:visited{
+	color: darkred;
+}
+#form{
+	color: white;
+}
+#a:visited{
+	color: white;
+}
+div{
+	border: 3px solid black;
+	margin: 5% 35%;
+	border-radius: 30px;
+	background-color: darkred;
+}
+div a{
+	color: white;
+}
+a{
+	color: darkred;
+}
+label{
+	display: inline-block;
+	width: 40%;
+}
+span{
+	color: white;
+}
+#contorno{
+	margin: auto;
+	border-radius: 30px;
+	background-color: white;
+}
+#alinha{
+	text-align: left;
+	padding: 1%;
+}
+img{
+	max-width: 300px;
+	max-height: 250px;
+	border: none;
+}

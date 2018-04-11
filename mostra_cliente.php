@@ -2,8 +2,10 @@
 	include("cabecalho.php");
 	
 	$arquivo = "clientes.xml";
+?>
+	<div id = "contorno">
 
-	
+<?php	
 	if(file_exists($arquivo)){
 		
 		$xml = simplexml_load_file($arquivo);
@@ -11,13 +13,13 @@
 		foreach($xml->cliente as $cliente){
 			if(str_replace(" ","",$cliente->nome) == str_replace(" ","",$_SESSION['login'])){
 				
-				echo"Nome :" . $cliente->nome . "<br/>";
+				echo"<div id = 'alinha'><span>Nome :" . $cliente->nome . "</span><br/>";
 				
-				echo"Email :" . $cliente->email . "<br/>";
+				echo"<span>Email :" . $cliente->email . "</span><br/>";
 				
-				echo"CPF :" . $cliente->cpf . "<br/>";
+				echo"<span>CPF :" . $cliente->cpf . "</span><br/>";
 				
-				echo"Saldo :" . $cliente->saldo . "<br/>";
+				echo"<span>Saldo :" . $cliente->saldo . "</span></div><br/>";
 				
 				break;
 				
@@ -25,6 +27,7 @@
 		}
 	?>
 			
+			<div id = "form">
 			<form action = "realiza_operacoes.php" method = "post">
 			
 				<label>
@@ -64,7 +67,7 @@
 								
 								?>
 									
-										<option><?=$cliente->nome;?>
+										<option><?=$cliente->nome;?></option>
 									
 							<?php
 									}
@@ -77,14 +80,14 @@
 					<input type = "submit" name = "Transferir!"/>
 
 				</form>
+				</div>
 <?php
 			}
 ?>
 			<br />
-		<a href="sair.php">Sair</a>
+		
 <?php
 
 		}
-
+	include("rodape.php");
 ?>
-</html>

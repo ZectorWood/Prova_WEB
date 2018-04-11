@@ -1,10 +1,5 @@
-<html>
-	<head>
-		<title>Index</title>
-		<meta charset = "UTF-8" />
-	</head>
-</html>
 <?php
+	include("cabecalho.php");
 	session_start();
 	
 	$arquivo = "clientes.xml";
@@ -56,4 +51,5 @@
 	}
 	
 	header("location: mostra_cliente.php");
+	include("rodape.php");
 ?>
