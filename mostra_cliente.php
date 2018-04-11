@@ -1,9 +1,13 @@
 <?php
+	$titulo = "DADOS DA CONTA";
+
 	include("cabecalho.php");
 	
 	$arquivo = "clientes.xml";
+?>
+		<h2>BANCO BONDE DA STRONDA</h2>
 
-	
+<?php	
 	if(file_exists($arquivo)){
 		
 		$xml = simplexml_load_file($arquivo);
@@ -11,34 +15,39 @@
 		foreach($xml->cliente as $cliente){
 			if(str_replace(" ","",$cliente->nome) == str_replace(" ","",$_SESSION['login'])){
 				
-				echo"Nome :" . $cliente->nome . "<br/>";
+				echo"<div id = 'alinha'><span>Nome :" . $cliente->nome . "</span><br/>";
 				
-				echo"Email :" . $cliente->email . "<br/>";
+				echo"<span>Email :" . $cliente->email . "</span><br/>";
 				
-				echo"CPF :" . $cliente->cpf . "<br/>";
+				echo"<span>CPF :" . $cliente->cpf . "</span><br/>";
 				
-				echo"Saldo :" . $cliente->saldo . "<br/>";
-				
+				if($cliente->saldo>0){
+
+					echo"<span style = 'color: lightgreen;'>Saldo :" . $cliente->saldo . "</span></div><br/>";
+				}else{
+					echo"<span>Saldo :" . $cliente->saldo . "</span></div><br/>";
+				}
 				break;
 				
 			}
 		}
 	?>
 			
+			<div id = "form">
 			<form action = "realiza_operacoes.php" method = "post">
 			
-				<label>
+				<label id = "teste">
 					Fazer saque
-					<input type = "number" name = "saque"/>
+					<input id = "teste2" type = "number" name = "saque"/>
 				</label>
 				
 				<input type = "submit" value = "Sacar!"/>
 			</form>
 				
 			<form action = "realiza_operacoes.php" method = "post">	
-				<label>
+				<label id = "teste">
 					Fazer depósito
-					<input type = "number" name = "deposito"/>
+					<input id = "teste2" type = "number" name = "deposito"/>
 				</label>
 				
 				<input type = "submit" value = "Depositar!" />
@@ -50,11 +59,13 @@
 ?>
 			
 				<form action = "realiza_operacoes.php" method = "post">			
-					<label>
+					<label id = "teste">
 						Tranferir
-						<input type = "number" name = "transferencia"/>
+						<input id = "teste2" type = "number" name = "transferencia"/>
+					</label>
+					<label id = "teste">
 						Para
-						<select name = "recebedor">
+						<select id = "teste2" name = "recebedor">
 						
 							<?php
 							
@@ -64,7 +75,7 @@
 								
 								?>
 									
-										<option><?=$cliente->nome;?>
+										<option><?=$cliente->nome;?></option>
 									
 							<?php
 									}
@@ -74,17 +85,17 @@
 						</select>
 					</label>
 					
-					<input type = "submit" name = "Transferir!"/>
+					<input type = "submit" value = "Tranferir!"/>
 
 				</form>
+				</div>
 <?php
 			}
 ?>
 			<br />
-		<a href="sair.php">Sair</a>
+		
 <?php
 
 		}
-
+	include("rodape.php");
 ?>
-</html>

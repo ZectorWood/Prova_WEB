@@ -1,0 +1,112 @@
+body{
+	text-align: center;
+	font-family: Britannic Bold;
+	font-size: 20px;
+	overflow-x: hidden;
+	background-color: darkred;
+}
+div{
+	border: 3px solid black;
+	margin: 5% 35%;
+	border-radius: 30px;
+	background-color: darkred;
+}
+#fundo{
+	width: full;
+	border: 3px solid black;
+	border-radius: 30px;
+	padding: 20px;
+	background-color: white;
+}
+#sair{
+	background-color: darkred;
+	color: white;
+	display: block;
+	text-align: right; 
+	border: 3px solid black;
+	width: 3%;
+	padding: 0.2%;
+	margin: 1%;
+	margin-left: 96%;
+	border-radius: 30px;
+	text-decoration: none;
+}
+#sair:visited{
+	background-color: red;
+	color: white;
+}
+#sair:active{
+	background-color: darkred;
+	color: red
+}
+#form{
+	margin: 5 30%;	
+	color: white;
+}
+label{
+	margin: 2%;
+	text-align: left;
+}
+[type = submit]{
+	width: 40%;
+	height: 5%;
+	background-color: green;
+	font-size: 150%;
+}
+[type = submit]:active{
+	background-color: lightgreen;
+	color: green;
+}
+label{
+	text-align:right;
+}
+input{
+	padding: 10px;
+	border-radius: 30px;
+	background-color: black;
+	color: white;
+}
+#a:visited{
+	color: white;
+}
+#a:active{
+	color: lightgreen;
+}
+h1{
+	margin: 10%;
+	font-size: 300%;
+}
+
+div a{
+	color: white;
+}
+a{
+	color: darkred;
+}
+label{
+	display: inline-block;
+	width: 40%;
+}
+span{
+	color: white;
+}
+#contorno{
+	margin: auto;
+	border-radius: 30px;
+	background-color: white;
+}
+#alinha{
+	text-align: left;
+	padding: 1%;
+}
+img{
+	max-width: 480px;
+	max-height: 244px;
+	margin: 5%;
+}
+#teste{
+	text-align: left;
+}
+#teste2{
+	margin: 20px;
+}
