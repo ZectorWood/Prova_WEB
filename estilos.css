@@ -51,7 +51,7 @@ label{
 	width: 40%;
 	height: 5%;
 	background-color: green;
-	font-size: 150%;
+	font-size: 100%;
 }
 [type = submit]:active{
 	background-color: lightgreen;
